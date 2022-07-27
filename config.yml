@@ -22,6 +22,9 @@ pipeline:
    - name: ResponseSelector
      epochs: 100
      constrain_similarities: true
+   - name: DucklingEntityExtractor
+     dimensions: [ "email", "number" ]
+     url: "https://duckling-server:8000"
    - name: FallbackClassifier
      threshold: 0.3
      ambiguity_threshold: 0.1
